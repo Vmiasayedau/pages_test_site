@@ -15,8 +15,8 @@ from fastapi.responses import HTMLResponse
 PROJECT_DIR: Final = Path(__file__).resolve().parent.parent
 DOTENV_PATH_ENV_NAME: Final = "DOTENV_PATH"
 WIDGET_ENV_NAMES: Final = (
-    'BOT_KEY'
-    'RUNTIME_URL'
+    'BOT_KEY',
+    'RUNTIME_URL',
     'SCRIPT_SRC'
 )
 
@@ -134,9 +134,9 @@ def get_widget_embed_snippet() -> str:
         return ""
 
     return (
-        f'<script src="{escape(configuration["WIDGET_SCRIPT_URL"], quote=True)}" '
-        f'data-bot-key="{escape(configuration["WIDGET_BOT_KEY"], quote=True)}" '
-        f'data-runtime-url="{escape(configuration["WIDGET_RUNTIME_URL"], quote=True)}" '
+        f'<script src="{escape(configuration["SCRIPT_SRC"], quote=True)}" '
+        f'data-bot-key="{escape(configuration["BOT_KEY"], quote=True)}" '
+        f'data-runtime-url="{escape(configuration["RUNTIME_URL"], quote=True)}" '
         "async></script>"
     )
 
