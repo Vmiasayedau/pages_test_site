@@ -15,9 +15,9 @@ from fastapi.responses import HTMLResponse
 PROJECT_DIR: Final = Path(__file__).resolve().parent.parent
 DOTENV_PATH_ENV_NAME: Final = "DOTENV_PATH"
 WIDGET_ENV_NAMES: Final = (
-    "WIDGET_SCRIPT_URL",
-    "WIDGET_RUNTIME_URL",
-    "WIDGET_BOT_KEY",
+    'BOT_KEY'
+    'RUNTIME_URL'
+    'SCRIPT_SRC'
 )
 
 
