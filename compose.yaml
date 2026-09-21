@@ -1,0 +1,10 @@
+services:
+  web:
+    build:
+      context: .
+    ports:
+      - "${SITE_PORT:-8000}:8000"
+    environment:
+      - BOT_KEY=${BOT_KEY}
+      - RUNTIME_URL=${RUNTIME_URL}
+      - SCRIPT_SRC=${SCRIPT_SRC}
